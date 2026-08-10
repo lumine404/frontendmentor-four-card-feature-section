@@ -52,6 +52,10 @@ h3 {
     
 }
 
+p {
+    color: var(--text-color);
+}
+
 .card p {
     color: var(--text-color);
     font-weight: 400;
