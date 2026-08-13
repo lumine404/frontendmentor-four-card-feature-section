@@ -36,6 +36,19 @@ main {
 
 }
 
+#red {
+    border-top: 4px solid var(--red);
+}
+
+#green {
+    border-top: 4px solid var(--green);
+}
+#orange {
+    border-top: 4px solid var(--orange);
+}
+#blue  {
+    border-top: 4px solid var(--blue);
+}
 h1 {
     color: var(--text-color);
     font-weight: 200;
