@@ -22,6 +22,17 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas:
+        "supervisor team-builder calculator"
+        "supervisor karma        calculator";
+
+    gap: 10px;
 }
 
 .card {
@@ -33,21 +44,25 @@ main {
     padding: 20px;
     margin: 20px;
     position: relative;
-
+    
 }
 
 #red {
     border-top: 4px solid var(--red);
+    grid-area: team-builder;
 }
 
 #green {
     border-top: 4px solid var(--green);
+    grid-area: supervisor;
 }
 #orange {
     border-top: 4px solid var(--orange);
+    grid-area: karma;
 }
 #blue  {
     border-top: 4px solid var(--blue);
+    grid-area: calculator;
 }
 h1 {
     color: var(--text-color);
