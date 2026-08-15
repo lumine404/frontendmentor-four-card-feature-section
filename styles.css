@@ -37,7 +37,7 @@ main {
     background-color: var(--bg-color);
     border: 1px solid var(--bg-color);
     box-shadow: 0.5px 1px 10px var(--text-color);
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: left;
     padding: 30px;
     
@@ -47,7 +47,11 @@ main {
     width: 350px;
     height: 250px;
     margin: 0;
-    
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 main > p {
@@ -80,6 +84,16 @@ main > p {
     grid-row: 1;
     transform: translateY(140px);
 }
+
+#green:hover,
+#blue:hover {
+    transform: translateY(140px) scale(1.03);
+}
+
+#red:hover,
+#orange:hover {
+    transform: scale(1.03);
+}
 h1 {
     color: var(--text-color);
     font-weight: 200;
@@ -94,7 +108,7 @@ h1 {
 
 h3 {
     color: var(--header-color);
-    
+    margin-top: 0;
 }
 
 p {
@@ -115,5 +129,13 @@ p {
 }
 
 @media (max-width: 600px) {
-    
+    .cards {
+        display: block;
+    }
+    .card {
+        margin: 30px;
+    }
+    #green, #blue {
+        transform: none;
+    }
 }
